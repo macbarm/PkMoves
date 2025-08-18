@@ -1,28 +1,29 @@
-THIS IS A PLUGIN AND IS TO BE PUT INTO THE PLUGINS FOLDER OF YOUR SERVER
+Note: This is a plugin and should be placed in the plugins folder of your server.
 
-Config Rundown: AirKick:
+Configuration Overview
+AirKick
 
-JumpHeight = how high the player jumps before hovering
+The AirKick ability allows players to jump and perform a powerful aerial attack. Configure the following parameters:
 
-Range = how far the kick can travel
+JumpHeight – How high the player jumps before hovering.
 
-Cooldown = the cooldown of the move
+Range – How far the kick can travel.
 
-Damage = how much damage the hit entities will receive
+Cooldown – The cooldown time before the ability can be used again.
+
+Damage – The amount of damage dealt to hit entities.
+
+LavaCrash
 
 
+Cooldown – Time (in milliseconds) before LavaCrash can be used again.
 
-LavaCrash:
+MagmaDelay – Delay (ms) before the magma phase begins after crashing the blocks.
 
+LavaDelay – Delay (ms) before lava particles appear and effects progress.
 
-Cooldown = the cooldown time before you can use LavaCrash again (Cooldown)
+AirDelay – Delay (ms) before molten blocks launch into the air.
 
-MagmaDelay = the delay (ms) before the magma phase begins after crashing the blocks (MagmaDelay)
+RestoreDelay – Delay (ms) before all temporary blocks revert to their original state.
 
-LavaDelay = the delay (ms) before lava particles appear and effects progress (LavaDelay)
-
-AirDelay = the delay (ms) before the molten blocks launch into the air (AirDelay)
-
-RestoreDelay = the delay (ms) before all temporary blocks revert to their original state (RestoreDelay)
-
-MaxBlocks = the maximum number of earth blocks affected by the ability (MaxBlocks)
+MaxBlocks – Maximum number of earth blocks affected by the ability.
