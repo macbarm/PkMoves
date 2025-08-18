@@ -1,0 +1,6 @@
+name: PkMoves
+version: '${project.version}'
+main: me.macbarm.com.pkmoves.PkMoves
+api-version: 1.19
+
+depend: [ProjectKorra]

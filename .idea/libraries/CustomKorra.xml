@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CustomKorra">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../CustomKorra.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/pk server/plugins/ProjectKorra-1.11.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
