@@ -212,4 +212,9 @@ public class AirSlide extends AirAbility implements AddonAbility {
             state = State.STATE_LEAPING;
         }
     }
+
+    @Override
+    public boolean isEnabled(){
+        return false;
+    }
 }
