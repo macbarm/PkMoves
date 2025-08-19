@@ -7,6 +7,7 @@ import com.projectkorra.projectkorra.ability.LavaAbility;
 import me.macbarm.com.pkmoves.air.AirKick;
 import me.macbarm.com.pkmoves.air.AirSlide;
 import me.macbarm.com.pkmoves.earth.LavaCrash;
+import me.macbarm.com.pkmoves.fire.BlazingUppercut;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
@@ -53,6 +54,10 @@ public class listener implements Listener {
             airSlide.click();
         }
 
+        if (bPlayer.getBoundAbility().getName().equals("BlazingUppercut")){
+            new BlazingUppercut(player);
+        }
+
 
 
     }
@@ -71,4 +76,6 @@ public class listener implements Listener {
         }
 
     }
+
+
 }
