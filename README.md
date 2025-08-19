@@ -12,7 +12,7 @@ The AirKick ability allows players to jump and perform a powerful aerial attack.
 | JumpHeight | 4             | How high the player jumps before hovering.     |
 | Range      | 20            | How far the kick can travel.                   |
 | Cooldown   | 5000          | Time (ms) before the ability can be used again. |
-| Damage     | 4.0           | Amount of damage dealt to hit entities.       |
+| Damage     | 6.0           | Amount of damage dealt to hit entities.       |
 
 ---
 
