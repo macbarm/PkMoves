@@ -13,6 +13,7 @@ import com.projectkorra.projectkorra.util.TempBlock;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.Sound;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
@@ -186,6 +187,9 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
             if (entity.equals(player)) continue;
             target = entity;
             player.swingMainHand();
+            GeneralMethods.setVelocity(this,player,new Vector(0,0,0));
+            TempBlock tempBlock = new TempBlock(player.getLocation().getBlock(),Material.AIR.createBlockData(), 2000);
+            player.getWorld().playSound(target.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH,2f,.5f);
             state = State.STATE_HIT;
 
         }
