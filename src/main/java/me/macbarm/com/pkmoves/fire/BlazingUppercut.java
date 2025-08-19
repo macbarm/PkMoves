@@ -54,18 +54,8 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
         if (!player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType().isSolid()) return;
 
         location = player.getLocation();
-        Vector dir = player.getLocation().getDirection();
-        dir.setY(0);
-
-        if (dir.lengthSquared() < 0.01) {
-            float yaw = player.getLocation().getYaw();
-            double radians = Math.toRadians(yaw);
-            dir.setX(-Math.sin(radians));
-            dir.setZ(Math.cos(radians));
-        }
-
-        direction = dir.normalize();
         state = State.STATE_DASH;
+
 
 
         start();
@@ -161,6 +151,19 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
     private void dashing(Location location) {
         player.setFireTicks(0);
 
+        Vector dir = player.getLocation().getDirection();
+        dir.setY(0);
+
+        if (dir.lengthSquared() < 0.01) {
+            float yaw = player.getLocation().getYaw();
+            double radians = Math.toRadians(yaw);
+            dir.setX(-Math.sin(radians));
+            dir.setZ(Math.cos(radians));
+        }
+
+        direction = dir.normalize();
+
+
         if (distanceTravelled >= dashDistance){
             state = State.STATE_REMOVE;
             return;
@@ -182,6 +185,7 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
         for (Entity entity : GeneralMethods.getEntitiesAroundPoint(location, 1)) {
             if (entity.equals(player)) continue;
             target = entity;
+            player.swingMainHand();
             state = State.STATE_HIT;
 
         }
