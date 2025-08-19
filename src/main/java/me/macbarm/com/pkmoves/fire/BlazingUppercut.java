@@ -251,7 +251,7 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
         return "Left-click while looking at your target to dash forward. "
                 + "Make sure you are standing on solid ground. "
                 + "The ability will hit the first entity in your path and launch them upwards "
-                + "with a spiral of fire around them.";
+                + "with a spiral of fire around them";
     }
 
 
