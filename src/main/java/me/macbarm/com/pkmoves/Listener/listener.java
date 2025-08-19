@@ -15,6 +15,7 @@ import org.bukkit.event.EventHandler;
 //import me.macbarm.com.pkmoves.chi.DripLeafDash;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 
@@ -77,5 +78,17 @@ public class listener implements Listener {
 
     }
 
+    @EventHandler
+    public void onDamge(EntityDamageEvent event){
+        if (event.getEntity() instanceof Player) {
+            Player player = (Player) event.getEntity();
+            BlazingUppercut blazingUppercut = CoreAbility.getAbility(player, BlazingUppercut.class);
+
+             if (event.getCause() == EntityDamageEvent.DamageCause.FIRE && blazingUppercut != null) {
+                 event.setCancelled(true);
+
+        }
+        }
+    }
 
 }

@@ -233,7 +233,10 @@ public class BlazingUppercut extends FireAbility implements AddonAbility {
         if (entity.getLocation().getY() >= endHeight) {
             state = State.STATE_REMOVE;
         }
-    } }
+    } else {
+            state = State.STATE_REMOVE;
+        }
+    }
 
     @Override
     public String getDescription() {
